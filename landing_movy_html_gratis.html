@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOVY – Auxilio vehicular inmediato</title>
+  <meta name="description" content="Conectamos a conductores con ayuda inmediata: baterías, ruedas, grúas y más. Dejá tu contacto y respondé 4 preguntas rápidas para enterarte cuando lancemos." />
+  <style>
+    :root{
+      --blue:#0A66CC;
+      --blue-dark:#083B7A;
+      --bg:#0f172a;
+      --text:#0b1020;
+      --muted:#5b657a;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;color:var(--text);background:#f6f8fb}
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    header{background:var(--bg);color:#fff}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:0.5px}
+    .logo-word{font-size:22px;display:flex;align-items:center;gap:6px}
+    .o-ring{position:relative;display:inline-block;width:18px;height:18px;border:3px solid #fff;border-radius:999px}
+    .o-ring:after{content:"";position:absolute;inset:4px;border-radius:999px;background:#fff}
+    .btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .hero{padding:54px 0 36px}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 10px}
+    .hero p{color:#e5e7eb;margin:0 0 20px;font-size:clamp(16px,2.2vw,18px)}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:var(--card);border:1px solid #e6ebf2;border-radius:14px;box-shadow:0 4px 18px rgba(10,30,60,.06)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:-20px 0 28px}
+    .feature{padding:16px}
+    .feature b{display:block;margin-bottom:6px}
+    .section{padding:30px 0}
+    .form-wrap{padding:18px}
+    .iframe-hint{font-size:14px;color:var(--muted);margin-top:8px}
+    footer{padding:30px 0 50px;color:var(--muted);font-size:14px}
+    .badge{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:6px 10px;border-radius:999px;font-size:12px;color:#c9d6ff}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:end}
+    @media (max-width:850px){.hero-inner{grid-template-columns:1fr}}
+    .mock{background:#0A66CC;border-radius:24px;aspect-ratio:9/16;max-width:340px;width:100%;display:flex;align-items:center;justify-content:center;margin:0 auto;border:10px solid #0d1b2a}
+    .mock h2{color:#fff;font-size:42px;letter-spacing:.5px}
+    .mock .o{display:inline-block;width:28px;height:28px;border:5px solid #fff;border-radius:999px;position:relative;top:4px;margin:0 3px}
+    .mock .o:after{content:"";position:absolute;inset:6px;border-radius:999px;background:#fff}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="logo">
+        <div class="logo-word">M<span class="o-ring"></span>VY</div>
+      </div>
+      <nav>
+        <a href="#form" class="btn">Participar de la encuesta</a>
+      </nav>
+    </div>
+    <div class="container hero">
+      <div class="hero-inner">
+        <div>
+          <span class="badge">Proyecto en validación</span>
+          <h1>Auxilio vehicular inmediato, cuando más lo necesitás</h1>
+          <p>Baterías, ruedas, grúas y más. Conectamos a conductores con ayuda en minutos.
+             Respondé 4–5 preguntas y dejá tu contacto para ser de los primeros en probar <b>MOVY</b>.</p>
+          <div class="actions">
+            <a href="#form" class="btn">Responder ahora (1 minuto)</a>
+            <a href="#como" style="color:#cbd5e1">¿Cómo funciona?</a>
+          </div>
+        </div>
+        <div class="mock card" aria-hidden="true">
+          <h2>M<span class="o"></span>VY</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="como">
+      <div class="features">
+        <div class="feature card"><b>⚡ Rápido</b><span>Pedís auxilio y encontramos el proveedor más cercano.</span></div>
+        <div class="feature card"><b>🔒 Confiable</b><span>Perfiles verificados y calificaciones visibles.</span></div>
+        <div class="feature card"><b>📍 Cercano</b><span>Basado en tu ubicación para reducir tiempos de espera.</span></div>
+      </div>
+    </section>
+
+    <section class="section card" id="form">
+      <div class="form-wrap">
+        <h3 style="margin:0 0 6px">Encuesta rápida</h3>
+        <p style="margin:0 0 14px;color:var(--muted)">Elegí opciones y al final dejá tu correo/WhatsApp para enterarte cuando lancemos.</p>
+        <div id="gform" class="card" style="overflow:hidden">
+          <iframe id="formFrame" title="Encuesta MOVY" style="width:100%;height:1200px;border:0" src="https://docs.google.com/forms/d/e/1FAIpQLSey_GN8GLWr3LPf6RC737-YraVC9PA9z_OELgyRvZUaCA8BVQ/viewform?embedded=true" loading="lazy"></iframe>
+        </div>
+        <div class="iframe-hint">Si el formulario no carga, <a id="formLink" href="https://docs.google.com/forms/d/e/1FAIpQLSey_GN8GLWr3LPf6RC737-YraVC9PA9z_OELgyRvZUaCA8BVQ/viewform" target="_blank" rel="noopener">abrilo acá</a>.</div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align:center">
+      <p style="color:var(--muted);font-size:13px">Al participar aceptás ser contactado/a para pruebas del prototipo. No compartimos tus datos con terceros.</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>© <span id="y"></span> MOVY</div>
+      <div><a href="#form">Participar</a> · <a href="#como">Cómo funciona</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
